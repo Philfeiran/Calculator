@@ -1,5 +1,5 @@
 
 FROM python:3
-ADD my_script.py /
+ADD calculatorTest.py /
 RUN pip install pystrich
 CMD [ "python", "./calculatorTest.py" ]
