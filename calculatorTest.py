@@ -1,4 +1,3 @@
-
 from calculator import calculator
 import unittest
 import csv
@@ -12,9 +11,9 @@ class testCalculator(unittest.TestCase):
         for item in reader:
             if reader.line_num ==1:
                 continue
-            x=int(item[0])
-            y=int(item[1])
-            result=int(item[2])
+            x=float(item[0])
+            y=float(item[1])
+            result=float(item[2])
             self.assertEqual(cal.add(x,y),result)
     def testMinus(self):
         cal = calculator()
@@ -23,9 +22,9 @@ class testCalculator(unittest.TestCase):
         for item in reader:
             if reader.line_num ==1:
                 continue
-            x=int(item[0])
-            y=int(item[1])
-            result=int(item[2])
+            x=float(item[0])
+            y=float(item[1])
+            result=float(item[2])
             self.assertEqual(cal.minus(y,x),result)
 
     def testMultip(self):
@@ -35,9 +34,9 @@ class testCalculator(unittest.TestCase):
         for item in reader:
             if reader.line_num == 1:
                 continue
-            x = int(item[0])
-            y = int(item[1])
-            result = int(item[2])
+            x = float(item[0])
+            y = float(item[1])
+            result = float(item[2])
             self.assertEqual(cal.multply(y, x), result)
 
     def testDivide(self):
@@ -47,8 +46,8 @@ class testCalculator(unittest.TestCase):
         for item in reader:
             if reader.line_num == 1:
                 continue
-            x = int(item[0])
-            y = int(item[1])
+            x = float(item[0])
+            y = float(item[1])
             result = float(item[2])
             self.assertEqual(round(cal.divide(y, x),5), round(result,5))
 
@@ -59,8 +58,8 @@ class testCalculator(unittest.TestCase):
         for item in reader:
             if reader.line_num == 1:
                 continue
-            x = int(item[0])
-            result = int(item[1])
+            x = float(item[0])
+            result = float(item[1])
             self.assertEqual(cal.square(x), result)
 
 
