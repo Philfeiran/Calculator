@@ -42,7 +42,7 @@ class testCalculator(unittest.TestCase):
     def testSquareRoot(self):
         self.assertEqual(self.cal.squareRoot(4),2)
     def testCSVfiles(self):
-        #test addition file
+        #test given CSV files
         xADD,yADD,resultADD = readFile("./src/Unit Test Addition.csv")
         xSUB,ySUB,resultSUB= readFile("./src/Unit Test Subtraction.csv")
         xMUL,yMUL,resultMUL=readFile("./src/Unit Test Multiplication.csv")
@@ -50,12 +50,12 @@ class testCalculator(unittest.TestCase):
         xSQU, resultSQU = readFile("./src/Unit Test Square.csv")
         xSQR, resultSQR = readFile("./src/Unit Test Square Root.csv")
 
-        #All CSV files have 18 exapmle
+        #every CSV file has 18 cases
         for i in range (18):
             self.assertEqual(self.cal.add(xADD[i],yADD[i]),resultADD[i])
             self.assertEqual(self.cal.minus(xSUB[i],ySUB[i]),resultSUB[i])
             self.assertEqual(self.cal.multply(xMUL[i],yMUL[i]),resultMUL[i])
-            #for divison and square root, I only campare 6 demicial places
+            #for divison and square root, I only compare results in 6 demicial places
             self.assertEqual(round(self.cal.divide(xDIV[i],yDIV[i]),6),round(resultDIV[i],6))
             self.assertEqual(self.cal.square(xSQU[i]),resultSQU[i])
             self.assertEqual(round(self.cal.squareRoot(xSQR[i]),6),round(resultSQR[i],6))
