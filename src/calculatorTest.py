@@ -43,12 +43,12 @@ class testCalculator(unittest.TestCase):
         self.assertEqual(self.cal.squareRoot(4),2)
     def testCSVfiles(self):
         #test addition file
-        xADD,yADD,resultADD = readFile("Unit Test Addition.csv")
-        xSUB,ySUB,resultSUB= readFile("Unit Test Subtraction.csv")
-        xMUL,yMUL,resultMUL=readFile("Unit Test Multiplication.csv")
-        xDIV, yDIV, resultDIV = readFile("Unit Test Division.csv")
-        xSQU, resultSQU = readFile("Unit Test Square.csv")
-        xSQR, resultSQR = readFile("Unit Test Square Root.csv")
+        xADD,yADD,resultADD = readFile("./src/Unit Test Addition.csv")
+        xSUB,ySUB,resultSUB= readFile("./src/Unit Test Subtraction.csv")
+        xMUL,yMUL,resultMUL=readFile("./src/Unit Test Multiplication.csv")
+        xDIV, yDIV, resultDIV = readFile("./src/Unit Test Division.csv")
+        xSQU, resultSQU = readFile("./src/Unit Test Square.csv")
+        xSQR, resultSQR = readFile("./src/Unit Test Square Root.csv")
 
         #All CSV files have 18 exapmle
         for i in range (18):
